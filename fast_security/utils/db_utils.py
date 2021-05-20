@@ -1,4 +1,5 @@
-from database import SessionLocal
+from .database import SessionLocal
+
 
 async def get_db():
     db = SessionLocal()
