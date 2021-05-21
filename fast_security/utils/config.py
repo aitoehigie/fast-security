@@ -1,7 +1,5 @@
 from pydantic import BaseSettings
 
-# Scheme: "postgres+psycopg2://<USERNAME>:<PASSWORD>@<IP_ADDRESS>:<PORT>/<DATABASE_NAME>"
-
 
 class Settings(BaseSettings):
     ENGINE: str
@@ -13,6 +11,11 @@ class Settings(BaseSettings):
     SECRET_KEY: str
     ALGORITHM: str
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
+
+    # Twilio settings
+    TWILIO_SID: str
+    TWILIO_TOKEN: str
+    TWILIO_FROM: str
 
     class Config:
         env_file = ".env"
