@@ -17,5 +17,7 @@ class Settings(BaseSettings):
     TWILIO_TOKEN: str
     TWILIO_FROM: str
 
+    # SMTP settings
+
     class Config:
-        env_file = ".env"
+        env_file = ""  # Path to .env file
