@@ -3,12 +3,14 @@ from pydantic import BaseSettings
 
 class Settings(BaseSettings):
     # Database settings
-    SCHEME: str
-    USER: str
-    PASSWORD: str
-    HOST: str
-    PORT: str
+    DB_SCHEME: str
+    DB_USER: str
+    DB_PASSWORD: str
+    DB_HOST: str
+    DB_PORT: str
     DB_NAME: str
+
+    # JWT settings
     SECRET_KEY: str
     ALGORITHM: str
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30

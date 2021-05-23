@@ -5,7 +5,7 @@ from .settings_utils import get_settings
 
 config = get_settings()
 
-SQLALCHEMY_DATABASE_URL = f"{config.SCHEME}://{config.USER}@{config.PASSWORD}@{config.HOST}:{config.PORT}/{config.DB_NAME}"
+SQLALCHEMY_DATABASE_URL = f"{config.DB_SCHEME}://{config.DB_USER}@{config.DB_PASSWORD}@{config.DB_HOST}:{config.DB_PORT}/{config.DB_NAME}"
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
