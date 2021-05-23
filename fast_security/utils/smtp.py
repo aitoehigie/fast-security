@@ -1,5 +1,6 @@
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+
 from aiosmtplib import send
 
 from .settings_utils import get_settings
