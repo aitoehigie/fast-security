@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 from .database import SessionLocal
 
 
 async def get_db():
-    db = SessionLocal()
+    db_session = SessionLocal()
     try:
-        yield db
+        yield db_session
     finally:
-        db.close()
+        db_session.close()
